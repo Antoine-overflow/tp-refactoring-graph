@@ -1,5 +1,7 @@
 package org.acme.graph.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.acme.graph.errors.JsonError;
 import org.acme.graph.errors.NotFoundException;
 import org.springframework.http.HttpStatus;
@@ -28,5 +30,4 @@ public class CustomErrorHandler extends ResponseEntityExceptionHandler {
 		JsonError error = new JsonError(HttpStatus.NOT_FOUND, e.getMessage());
 		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
-
 }
