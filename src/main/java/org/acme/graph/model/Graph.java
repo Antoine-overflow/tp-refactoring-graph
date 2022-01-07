@@ -90,6 +90,7 @@ public class Graph {
 		Vertex v = new Vertex();
 		v.setCoordinate(coordinate);
 		v.setId(id);
+		vertices.add(v);
 		return v;
 	}
 
@@ -139,6 +140,7 @@ public class Graph {
 	public Edge createEdge(Vertex source, Vertex target, String id){
 		Edge e = new Edge(source, target);
 		e.setId(id);
+		edges.add(e);
 		return e;
 	}
 
